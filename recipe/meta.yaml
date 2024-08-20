@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
 
 outputs:
   - name: openpisco-core
@@ -36,7 +36,7 @@ outputs:
         - qtconsole
         - pyqtgraph
         - PySide2
-        - vtk
+        - vtk <=9.3.0
         - libmed >=4.1.1
         - qt =5
     test:
@@ -44,8 +44,6 @@ outputs:
         - OpenPisco
       commands:
         - python -m OpenPisco.CLApp.OpenPiscoCL
-
-
 
   - name: "openpisco"
     version: {{ version }}
