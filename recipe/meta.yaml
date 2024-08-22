@@ -10,7 +10,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
 
 outputs:
   - name: openpisco-core
@@ -36,14 +36,14 @@ outputs:
         - qtconsole
         - pyqtgraph
         - PySide2
-        - vtk <=9.3.0
+        - vtk <=9.2.6
         - libmed >=4.1.1
         - qt =5
     test:
       imports:
         - OpenPisco
       commands:
-        - python -m OpenPisco.CLApp.OpenPiscoCL
+        - python -m Muscat -e OpenPisco -k aster -k mmg -k meshdist -k advect -k thickness -k AMInherentStrainSolver -k Levelset -k Extension -k freefem -k zset -k qt
 
   - name: "openpisco"
     version: {{ version }}
