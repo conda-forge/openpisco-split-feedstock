@@ -50,13 +50,17 @@ outputs:
     requirements:
       run:
         - openpisco-core
+        - iscd-mshdist
+        - iscd-advection 
+        - iscd-velocityextension 
+        - mmgsuite
       run_constrained:
         - openpisco-core ={{ version }}
     test:
       imports:
         - OpenPisco
       commands:
-        - python -m OpenPisco.CLApp.OpenPiscoCL
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt
 
 
 about:
