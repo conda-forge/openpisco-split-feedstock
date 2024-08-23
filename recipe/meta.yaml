@@ -49,8 +49,8 @@ outputs:
     requirements:
       run:
         - openpisco-core
-        - iscd-mshdist # [not win]
-        - iscd-advection # [not win]
+        - iscd-mshdist  # [not win]
+        - iscd-advection  # [not win]
         - mmgsuite
       run_constrained:
         - openpisco-core ={{ version }}
@@ -58,7 +58,7 @@ outputs:
       imports:
         - OpenPisco
       commands:
-        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt -k extension # [not win]
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt -k extension  # [not win]
         - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt -k extension -k meshdist -k advect -k levelset  # [win]
 
 
