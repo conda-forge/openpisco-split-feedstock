@@ -52,7 +52,6 @@ outputs:
         - openpisco-core
         - iscd-mshdist
         - iscd-advection 
-        - iscd-velocityextension 
         - mmgsuite
       run_constrained:
         - openpisco-core ={{ version }}
@@ -60,7 +59,7 @@ outputs:
       imports:
         - OpenPisco
       commands:
-        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt -k extension 
 
 
 about:
