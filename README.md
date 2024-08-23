@@ -21,72 +21,11 @@ Current build status
 ====================
 
 
-<table>
-    
-  <tr>
-    <td>Azure</td>
+<table><tr><td>All platforms:</td>
     <td>
-      <details>
-        <summary>
-          <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23152&branchName=main">
-            <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openpisco-split-feedstock?branchName=main">
-          </a>
-        </summary>
-        <table>
-          <thead><tr><th>Variant</th><th>Status</th></tr></thead>
-          <tbody><tr>
-              <td>linux_64_python3.10.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23152&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openpisco-split-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.10.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_python3.11.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23152&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openpisco-split-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.11.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_python3.12.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23152&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openpisco-split-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.12.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_python3.8.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23152&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openpisco-split-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.8.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_64_python3.9.____cpython</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23152&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openpisco-split-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_python3.9.____cpython" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23152&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openpisco-split-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23152&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openpisco-split-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </details>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23152&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/openpisco-split-feedstock?branchName=main">
+      </a>
     </td>
   </tr>
 </table>
@@ -96,7 +35,6 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-openpisco-green.svg)](https://anaconda.org/conda-forge/openpisco) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/openpisco.svg)](https://anaconda.org/conda-forge/openpisco) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/openpisco.svg)](https://anaconda.org/conda-forge/openpisco) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/openpisco.svg)](https://anaconda.org/conda-forge/openpisco) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-openpisco--core-green.svg)](https://anaconda.org/conda-forge/openpisco-core) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/openpisco-core.svg)](https://anaconda.org/conda-forge/openpisco-core) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/openpisco-core.svg)](https://anaconda.org/conda-forge/openpisco-core) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/openpisco-core.svg)](https://anaconda.org/conda-forge/openpisco-core) |
 
 Installing openpisco-split
@@ -109,41 +47,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `openpisco, openpisco-core` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `openpisco-core` can be installed with `conda`:
 
 ```
-conda install openpisco openpisco-core
-```
-
-or with `mamba`:
-
-```
-mamba install openpisco openpisco-core
-```
-
-It is possible to list all of the versions of `openpisco` available on your platform with `conda`:
-
-```
-conda search openpisco --channel conda-forge
+conda install openpisco-core
 ```
 
 or with `mamba`:
 
 ```
-mamba search openpisco --channel conda-forge
+mamba install openpisco-core
+```
+
+It is possible to list all of the versions of `openpisco-core` available on your platform with `conda`:
+
+```
+conda search openpisco-core --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search openpisco-core --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search openpisco --channel conda-forge
+mamba repoquery search openpisco-core --channel conda-forge
 
-# List packages depending on `openpisco`:
-mamba repoquery whoneeds openpisco --channel conda-forge
+# List packages depending on `openpisco-core`:
+mamba repoquery whoneeds openpisco-core --channel conda-forge
 
-# List dependencies of `openpisco`:
-mamba repoquery depends openpisco --channel conda-forge
+# List dependencies of `openpisco-core`:
+mamba repoquery depends openpisco-core --channel conda-forge
 ```
 
 
