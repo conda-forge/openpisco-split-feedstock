@@ -9,7 +9,7 @@ source:
   sha256: 17a43f954eb5edb26760e3dacec122fb1f10f586a1990c7f83936ca143377e7d
 
 build:
-  number: 3
+  number: 4
   skip: True  # [py == 38]
 
 outputs:
@@ -52,15 +52,15 @@ outputs:
         - openpisco-core
         - iscd-mshdist  # [not win]
         - iscd-advection  # [not win]
-        - mmgsuite
+        - mmgsuite  # [not win]
       run_constrained:
         - openpisco-core ={{ version }}
     test:
       imports:
         - OpenPisco
       commands:
-        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt -k extension  # [not win]
-        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt -k extension -k meshdist -k advect -k levelset  # [win]
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt -k extension  # [unix]
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt -k extension -k meshdist -k advect -k levelset -k mmg  # [win]
 
 
 about:
