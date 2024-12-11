@@ -9,8 +9,7 @@ source:
   sha256: 17a43f954eb5edb26760e3dacec122fb1f10f586a1990c7f83936ca143377e7d
 
 build:
-  number: 5
-  skip: True  # [py == 38]
+  number: 6
 
 outputs:
   - name: openpisco-core
@@ -30,6 +29,7 @@ outputs:
         - setuptools
       run:
         - muscat-core =2.2.2
+        - eigency =3.4.0.2
         - python
         - osqp
         - numba
@@ -53,8 +53,7 @@ outputs:
         - iscd-mshdist  # [not win]
         - iscd-advection  # [not win]
         - mmgsuite <=5.7.3  # [not win]
-      run_constrained:
-        - openpisco-core ={{ version }}
+        - {{ pin_subpackage('openpisco-core', exact=True) }}
     test:
       imports:
         - OpenPisco
