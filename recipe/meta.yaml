@@ -43,7 +43,7 @@ outputs:
       imports:
         - OpenPisco
       commands:
-        - python -m Muscat -e OpenPisco -k aster -k mmg -k meshdist -k advect -k thickness -k AMInherentStrainSolver -k Levelset -k Extension -k freefem -k zset -k qt -k med 
+        - python -m Muscat -e OpenPisco -k aster -k mmg -k meshdist -k advect -k thickness -k AMInherentStrainSolver -k Levelset -k Extension -k freefem -k zset -k qt 
 
   - name: "openpisco"
     version: {{ version }}
@@ -52,14 +52,14 @@ outputs:
         - openpisco-core
         - iscd-mshdist  # [not win]
         - iscd-advection  # [not win]
-        - mmgsuite <=5.7.3  # [not win]
+        - mmgsuite  # [not win]
         - {{ pin_subpackage('openpisco-core', exact=True) }}
     test:
       imports:
         - OpenPisco
       commands:
         - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k extension  # [unix]
-        - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k extension -k meshdist -k AMInherentStrainSolver -k advect -k levelset -k mmg -k med   # [win]
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k extension -k meshdist -k AMInherentStrainSolver -k advect -k levelset -k mmg   # [win]
 
 
 about:
