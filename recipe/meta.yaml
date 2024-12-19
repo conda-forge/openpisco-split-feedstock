@@ -58,7 +58,7 @@ outputs:
       imports:
         - OpenPisco
       commands:
-        - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k extension -k med   # [unix]
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k extension  # [unix]
         - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k extension -k meshdist -k AMInherentStrainSolver -k advect -k levelset -k mmg -k med   # [win]
 
 
