@@ -37,7 +37,7 @@ outputs:
         - pyqtgraph
         - PySide2
         - vtk
-        - libmed=4.1.1=nompi_h3115e3a_114
+        - libmed=4.1.1<=nompi_h3115e3a_114
         - qt =5
     test:
       imports:
