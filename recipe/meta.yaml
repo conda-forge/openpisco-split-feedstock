@@ -1,15 +1,15 @@
-{% set version = "1.1.4" %}
+{% set version = "1.1.5" %}
 
 package:
   name: openpisco-split
   version: {{ version }}
 
 source:
-  url: https://gitlab.com/openpisco/openpisco/-/archive/{{ version }}/openpisco-{{ version }}.tar.bz2
-  sha256: 17a43f954eb5edb26760e3dacec122fb1f10f586a1990c7f83936ca143377e7d
+  url: https://gitlab.com/openpisco/openpisco/-/archive/move-to-1.1.5/openpisco-move-to-1.1.5.tar.gz
+  #sha256: 17a43f954eb5edb26760e3dacec122fb1f10f586a1990c7f83936ca143377e7d
 
 build:
-  number: 6
+  number: 0
 
 outputs:
   - name: openpisco-core
@@ -28,7 +28,7 @@ outputs:
         - pip
         - setuptools
       run:
-        - muscat-core =2.2.2
+        - muscat-core =2.3.0
         - eigency =3.4.0.2
         - python
         - osqp
@@ -36,14 +36,13 @@ outputs:
         - qtconsole
         - pyqtgraph
         - PySide2
-        - vtk <=9.2.6
-        - libmed >=4.1.1
+        - vtk
         - qt =5
     test:
       imports:
         - OpenPisco
       commands:
-        - python -m Muscat -e OpenPisco -k aster -k mmg -k meshdist -k advect -k thickness -k AMInherentStrainSolver -k Levelset -k Extension -k freefem -k zset -k qt
+        - python -m Muscat -e OpenPisco -k aster -k mmg -k meshdist -k advect -k thickness -k AMInherentStrainSolver -k Levelset -k Extension -k freefem -k zset -k qt -k med
 
   - name: "openpisco"
     version: {{ version }}
@@ -52,14 +51,14 @@ outputs:
         - openpisco-core
         - iscd-mshdist  # [not win]
         - iscd-advection  # [not win]
-        - mmgsuite <=5.7.3  # [not win]
+        - mmgsuite  # [not win]
         - {{ pin_subpackage('openpisco-core', exact=True) }}
     test:
       imports:
         - OpenPisco
       commands:
-        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt -k extension  # [unix]
-        - python -m Muscat -e OpenPisco -k aster -k thickness -k AMInherentStrainSolver -k freefem -k zset -k qt -k extension -k meshdist -k advect -k levelset -k mmg  # [win]
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k extension -k med  # [unix]
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k extension -k meshdist -k AMInherentStrainSolver -k advect -k levelset -k mmg -k med  # [win]
 
 
 about:
