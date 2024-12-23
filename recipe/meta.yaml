@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://gitlab.com/openpisco/openpisco/-/archive/move-to-1.1.5/openpisco-move-to-1.1.5.tar.gz
-  #sha256: 17a43f954eb5edb26760e3dacec122fb1f10f586a1990c7f83936ca143377e7d
+  url: https://gitlab.com/openpisco/openpisco/-/archive/{{ version }}/openpisco-{{ version }}.tar.bz2
+  sha256: 17a43f954eb5edb26760e3dacec122fb1f10f586a1990c7f83936ca143377e7d
 
 build:
   number: 0
