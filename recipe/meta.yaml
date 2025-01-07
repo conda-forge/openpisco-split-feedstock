@@ -20,8 +20,7 @@ outputs:
       entry_points:
         - OpenPisco = OpenPisco.QtApp.OpenPiscoGUI:LaunchPiscoGUI
         - OpenPiscoCL = OpenPisco.CLApp.OpenPiscoCL:RunSimulation
-      skip_compile_pyc:
-        "OpenPiscoParaViewBridge.py"
+      skip_compile_pyc: "OpenPiscoParaViewBridge.py"
     requirements:
       host:
         - python
