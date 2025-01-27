@@ -9,7 +9,7 @@ source:
   sha256: 656af0662c8890fd460566211a9aefe821f0080295925435001dc6cd2617839f
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: openpisco-core
@@ -24,13 +24,13 @@ outputs:
         "OpenPiscoParaViewBridge.py"
     requirements:
       host:
-        - python
+        - python {{ python_min }}
         - pip
         - setuptools
       run:
         - muscat-core =2.3.0
         - eigency =3.4.0.2
-        - python
+        - python >={{ python_min }}
         - osqp
         - numba
         - qtconsole
@@ -40,6 +40,8 @@ outputs:
         - libmed >=4.1.1
         - qt =5
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - OpenPisco
       commands:
