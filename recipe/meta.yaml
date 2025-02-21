@@ -39,6 +39,7 @@ outputs:
         - vtk
         - libmed >=4.1.1
         - qt =5
+        - pycgns-core
     test:
       imports:
         - OpenPisco
