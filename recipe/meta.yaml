@@ -1,4 +1,4 @@
-{% set version = "1.1.5" %}
+{% set version = "1.2.0" %}
 
 package:
   name: openpisco-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://gitlab.com/openpisco/openpisco/-/archive/{{ version }}/openpisco-{{ version }}.tar.bz2
-  sha256: 656af0662c8890fd460566211a9aefe821f0080295925435001dc6cd2617839f
+  sha256: 21d08a6227dc996e1ef4fc46b2bc9cfd3e81a8665be35fc4ade310bccd2e9727
 
 build:
   number: 0
@@ -28,7 +28,7 @@ outputs:
         - pip
         - setuptools
       run:
-        - muscat-core =2.3.0
+        - muscat-core =2.4.0
         - eigency =3.4.0.2
         - python
         - osqp
@@ -39,6 +39,7 @@ outputs:
         - vtk
         - libmed >=4.1.1
         - qt =5
+        - pycgns-core
     test:
       imports:
         - OpenPisco
