@@ -6,8 +6,7 @@ package:
 
 source:
   url: https://gitlab.com/openpisco/openpisco/-/archive/move-to-1.2.1/openpisco-move-to-1.2.1.tar.bz2
-  sha256: 21d08a6227dc996e1ef4fc46b2bc9cfd3e81a8665be35fc4ade310bccd2e9727
-
+  sha256: 57f6227397e896431dcb999141d8634a2694d3238bb7d96afcf393b21759be35
 build:
   number: 0
 
