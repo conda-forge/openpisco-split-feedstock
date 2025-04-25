@@ -1,4 +1,4 @@
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: openpisco-split
@@ -6,11 +6,10 @@ package:
 
 source:
   url: https://gitlab.com/openpisco/openpisco/-/archive/{{ version }}/openpisco-{{ version }}.tar.bz2
-  sha256: 21d08a6227dc996e1ef4fc46b2bc9cfd3e81a8665be35fc4ade310bccd2e9727
-
+  sha256: 3001f989daf9553e38a183e747a040b89b5174bb7d76da125a65f9ddade16dfe
 build:
   number: 0
-
+  
 outputs:
   - name: openpisco-core
     version: {{ version }}
@@ -28,7 +27,7 @@ outputs:
         - pip
         - setuptools
       run:
-        - muscat-core =2.4.0
+        - muscat-core =2.4.1
         - eigency =3.4.0.2
         - python
         - osqp
@@ -44,7 +43,7 @@ outputs:
       imports:
         - OpenPisco
       commands:
-        - python -m Muscat -e OpenPisco -k aster -k mmg -k meshdist -k advect -k thickness -k AMInherentStrainSolver -k Levelset -k Extension -k freefem -k zset -k qt 
+        - python -m Muscat -e OpenPisco -k aster -k mmg -k meshdist -k advect -k thickness -k AMInherentStrainSolver -k Levelset -k freefem -k zset -k qt 
 
   - name: "openpisco"
     version: {{ version }}
@@ -59,8 +58,8 @@ outputs:
       imports:
         - OpenPisco
       commands:
-        - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k extension  # [unix]
-        - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k extension -k meshdist -k AMInherentStrainSolver -k advect -k levelset -k mmg   # [win]
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt  # [unix]
+        - python -m Muscat -e OpenPisco -k aster -k thickness -k freefem -k zset -k qt -k meshdist -k AMInherentStrainSolver -k advect -k levelset -k mmg   # [win]
 
 
 about:
