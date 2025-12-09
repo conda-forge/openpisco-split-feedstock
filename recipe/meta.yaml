@@ -1,11 +1,11 @@
-{% set version = "1.2.1" %}
+{% set version = "1.3" %}
 
 package:
   name: openpisco-split
   version: {{ version }}
 
 source:
-  url: https://gitlab.com/openpisco/openpisco/-/archive/{{ version }}/openpisco-{{ version }}.tar.bz2
+  url: https://gitlab.com/openpisco/openpisco/-/archive/master/openpisco-master.tar.bz2
   sha256: 3001f989daf9553e38a183e747a040b89b5174bb7d76da125a65f9ddade16dfe
 build:
   number: 0
@@ -27,7 +27,7 @@ outputs:
         - pip
         - setuptools
       run:
-        - muscat-core =2.4.1
+        - muscat-core =2.5.1
         - eigency =3.4.0.2
         - python
         - osqp
