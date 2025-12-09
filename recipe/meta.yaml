@@ -28,7 +28,6 @@ outputs:
         - setuptools
       run:
         - muscat-core =2.5.1
-        - eigency =3.4.0.2
         - python
         - osqp
         - numba
