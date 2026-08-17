@@ -31,12 +31,8 @@ outputs:
         - python
         - osqp
         - numba
-        - qtconsole
-        - pyqtgraph
-        - PySide6
         - vtk
         - libmed >=4.1.1
-        - qt
         - pycgns-core
     test:
       imports:
