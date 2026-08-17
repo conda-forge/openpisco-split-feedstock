@@ -36,7 +36,7 @@ outputs:
         - PySide6
         - vtk
         - libmed >=4.1.1
-        - qt =5
+        - qt
         - pycgns-core
     test:
       imports:
