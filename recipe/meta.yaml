@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://gitlab.com/openpisco/openpisco/-/archive/master/openpisco-master.tar.bz2
-  sha256: 09e59072cc61184bb31eb70f3f9f439f66fce8d1c48fe4b2bdd4256b4c2d4f8f
+  sha256: 66079f9aeede6d7ed02a7d8f715294d35d5764864711c3060f40ae4ec7beb4ce
 build:
   number: 0
 
