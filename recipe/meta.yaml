@@ -1,4 +1,4 @@
-{% set version = "1.4.0" %}
+{% set version = "1.4.1" %}
 
 package:
   name: openpisco-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://gitlab.com/openpisco/openpisco/-/archive/{{ version }}/openpisco-{{ version }}.tar.bz2
-  sha256: 0c8a4d0f5d75b399e32d7dc79856e6654e9ed46358b7f3a4737b9a5e76c56a88
+  sha256: 62953a952190b94151ac648a4555a88cc5e78c91c085875ab1d0435f5bf520d8
 build:
   number: 0
 
